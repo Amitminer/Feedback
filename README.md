@@ -6,6 +6,6 @@ feedback plugin for pocketmine mp
 supported discord webhook:D
 
 ## found a bug?
-feel free to open the issues [here](https://github.com/Amitminer888/Omnibot/issues/new)
+feel free to open the issues [here](https://github.com/Amitminer888/Feedback/issues/new)
 
 For contact me= discord username=```AmitxD#6115```
