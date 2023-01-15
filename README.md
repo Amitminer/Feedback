@@ -2,5 +2,5 @@
 feedback plugin for pocketmine mp 
 
 # command
-”/feedback <msg>"
+”/feedback [Your MSG]"
 supported discord webhook:D
