@@ -1,0 +1,9 @@
+---
+ # Feedback plugin by AmitxD
+ # https://github.com/Amitminer888/Feedback 
+ #★config #
+
+Webhook_url: ""
+# Your discord webhook url.
+
+---
