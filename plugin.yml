@@ -1,6 +1,6 @@
 ---
 name: Feedback
-version: 1.0.0
+version: 2.0.0
 main: AmitxD\Feedback\Main
 src-namespace-prefix: AmitxD\Feedback
 api: 4.12.8
