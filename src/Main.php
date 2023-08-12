@@ -13,18 +13,18 @@ use bbo51dog\pmdiscord\element\Content;
 
 class Main extends PluginBase implements Listener {
 
-    public function onEnable() : void{
+    public function onEnable() : void {
         $this->getLogger()->info("Feedback is enabled");
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->saveResource("config.yml");
-          $this->config = new Config($this->getDataFolder() . "config.yml");
-	  $this->saveDefaultConfig();
+        $this->config = new Config($this->getDataFolder() . "config.yml");
+        $this->saveDefaultConfig();
     }
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool {
-        switch($command->getName()){
+        switch ($command->getName()) {
             case "feedback":
-                if(!isset($args[0])){
+                if (!isset($args[0])) {
                     $sender->sendMessage("Please provide feedback");
                     return true;
                 }
@@ -32,14 +32,14 @@ class Main extends PluginBase implements Listener {
                 $sender->sendMessage("Thank you for your feedback!");
                 $webhook_url = $this->config->get("Webhook_url");
                 $webhook = Webhook::create($webhook_url);
-                
-$content = new Content();
-$content->setText($feedback);
-$webhook->add($content);
-$webhook->send();
+
+                $content = new Content();
+                $content->setText($feedback);
+                $webhook->add($content);
+                $webhook->send();
                 return true;
-            default:
-                return false;
+                default:
+                    return false;
+                }
         }
     }
-}
